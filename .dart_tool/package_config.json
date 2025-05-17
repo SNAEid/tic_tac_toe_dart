@@ -1,0 +1,14 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "tic_tac_toe",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    }
+  ],
+  "generated": "2025-05-17T15:50:44.559542Z",
+  "generator": "pub",
+  "generatorVersion": "3.3.4"
+}

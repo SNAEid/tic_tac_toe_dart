@@ -1,0 +1,40 @@
+modules = ["dart"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["dart"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Dart Tic-Tac-Toe"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "run_tictactoe"
+
+[[workflows.workflow]]
+name = "Dart Tic-Tac-Toe"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "dart run bin/main.dart"
+
+[[workflows.workflow]]
+name = "run_tictactoe"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "dart run bin/main.dart"
+
+[deployment]
+run = ["sh", "-c", "dart run bin/main.dart"]
