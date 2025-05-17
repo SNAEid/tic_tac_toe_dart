@@ -2,7 +2,7 @@ modules = ["dart"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["dart"]
+packages = ["dart", "gh"]
 
 [workflows]
 runButton = "Project"
